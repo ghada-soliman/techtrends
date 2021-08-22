@@ -1,0 +1,52 @@
+## Docker commands used to build the application 
+docker build -t techtrends .
+
+## Docker commands used to run the application
+docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+## get the container id
+docker ps
+## get the logs of this container id assigned to techtrends
+docker logs -f 618948cddcd6
+
+## Logs from the container running the TechTrends application
+docker logs -f 618948cddcd6 
+
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+INFO:werkzeug: * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:41:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:41:00] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:41:01] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:08/21/2021, 23:41:08 | Article "KubeCon + CloudNativeCon 2021" retrieved!
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:41:08] "GET /2 HTTP/1.1" 200 -
+INFO:app:Metrics request successful
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:41:16] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:45:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:45:47] "GET / HTTP/1.1" 200 -
+INFO:app:08/21/2021, 23:45:56 | Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:45:56] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:46:04] "GET /create HTTP/1.1" 200 -
+INFO:app:08/21/2021, 23:46:29 | New Article "New Article 2021" created
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:46:29] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:46:29] "GET / HTTP/1.1" 200 -
+INFO:app:08/21/2021, 23:46:37 | Article "New Article 2021" retrieved!
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:46:37] "GET /7 HTTP/1.1" 200 -
+INFO:app:Metrics request successful
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:46:47] "GET /metrics HTTP/1.1" 200 -
+INFO:app:healthcheck: ok
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:46:58] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:47:03] "GET / HTTP/1.1" 200 -
+INFO:app:08/21/2021, 23:49:51 | Article "30" does not exist
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:49:51] "GET /30 HTTP/1.1" 404 -
+INFO:app:08/21/2021, 23:49:57 | Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:49:57] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [21/Aug/2021 23:57:29] "GET / HTTP/1.1" 200 -
+INFO:app:08/22/2021, 00:03:51 | "About Us" page retrieved
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 00:03:51] "GET /about HTTP/1.1" 200 -
+INFO:app:08/22/2021, 00:04:15 | Article "Kubernetes v1.20 Release Notes" retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 00:04:15] "GET /3 HTTP/1.1" 200 -
