@@ -1,0 +1,2 @@
+# techtrends
+added github actions
